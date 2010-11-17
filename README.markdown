@@ -1,4 +1,4 @@
-__Full Concrete Table Inheritance Behavior__
+###Full Concrete Table Inheritance Behavior###
 
 The Doctrine Concrete Inheritance copies only structure of parent table. This behavior allows to have a data replication.
 
