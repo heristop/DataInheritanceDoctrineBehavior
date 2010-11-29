@@ -1,12 +1,12 @@
-# Full Concrete Table Inheritance Behavior
+# Full Concrete Table Inheritance Behavior #
 
-## Presentation
+## Presentation ##
 
-`Concrete Table Inheritance` implemented in Doctrine copies only structure of parent table. The replication data is not supported. This behavior allows to have a full copy. 
+`Concrete Table Inheritance` implemented in Doctrine copies only structure of parent table. This behavior allows to have a data replication. 
 
-## Usage
+## Usage ##
 
-# Schema Definition
+### Schema Definition ###
 
 To implement it, the extended table need to have a "descendant_column". The inherited tables must have the `Concrete Table Inheritance` option setted.
 
@@ -42,14 +42,14 @@ In the following example, the `article` and `video` tables use this behavior to 
         resource_link:
           type: varchar(100)
 		  
-# Data replication
+### Data replication ###
 
 Every time you save an `Article` or a `Video` object, a copy of the `title` and `category_id` columns is saved in a `Content` object.
 
-## Licence
+## Licence ##
 
 MIT Licence
 
-## Changelog
+## Changelog ##
 
- * version 0.1 - 2010-11-31, heristop
+ * version 0.1 - 2010-11-30, heristop
