@@ -92,13 +92,8 @@ class Doctrine_Template_DataInheritance extends Doctrine_Template
     $parentClass = $this->_options['extends'];
     if ($update)
     {
-      $fieldsModified = $this->_invoker->getModified(true);
-      
-      if (! empty($fieldsModified))
-      {
-        $method = "get{$this->_options['parent_alias']}";
-        $parent = $this->_invoker->$method();
-      }
+      $method = "get{$this->_options['parent_alias']}";
+      $parent = $this->_invoker->$method();
     }
     else if (is_null($this->_invoker->parent_id))
     {

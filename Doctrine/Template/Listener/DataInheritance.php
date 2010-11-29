@@ -14,7 +14,7 @@ class Doctrine_Template_Listener_DataInheritance extends Doctrine_Record_Listene
     $this->_options = $options;
   }
   
-  public function preUpdate(Doctrine_Event $event)
+  public function postUpdate(Doctrine_Event $event)
   {
     $event->getInvoker()->synchronizeParent();
   }
